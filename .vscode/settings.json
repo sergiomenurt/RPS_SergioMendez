@@ -1,5 +1,6 @@
 {
     "conventionalCommits.scopes": [
-        "RPS"
+        "RPS",
+        "tests_RPS"
     ]
 }
