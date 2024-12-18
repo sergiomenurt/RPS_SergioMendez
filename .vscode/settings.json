@@ -1,6 +1,7 @@
 {
     "conventionalCommits.scopes": [
         "RPS",
-        "tests_RPS"
+        "tests_RPS",
+        "README"
     ]
 }
