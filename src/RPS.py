@@ -1,5 +1,6 @@
 import random
 from enum import IntEnum
+from typing import Counter
 
 
 class GameAction(IntEnum):
@@ -15,9 +16,9 @@ class GameResult(IntEnum):
 
 
 Victories = {
-    GameAction.Rock: GameAction.Paper,
-    GameAction.Paper: GameAction.Scissors,
-    GameAction.Scissors: GameAction.Rock
+    GameAction.Rock: GameAction.Scissors,
+    GameAction.Paper: GameAction.Rock,
+    GameAction.Scissors: GameAction.Paper
 }
 
 user_history = []
@@ -36,11 +37,16 @@ def assess_game(user_action, computer_action):
 
 
 def get_computer_action():
-    if len(user_history) < 3:
+    if len(user_history) < 6:
         computer_selection = random.randint(0, len(GameAction) - 1)
     else:
-        user_last_move = user_history[-1]
-        computer_selection = Victories[user_last_move].value
+        recent_actions = user_history[-6:]
+        action_counts = Counter(recent_actions)
+        most_common_actions = [action for action, count in action_counts.items()
+                               if count == max(action_counts.values())]
+        target_action = random.choice(most_common_actions)
+        computer_selection = Victories[target_action].value
+
     computer_action = GameAction(computer_selection)
     print(f"Computer picked {computer_action.name}.")
     return computer_action
