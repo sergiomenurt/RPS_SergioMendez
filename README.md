@@ -36,7 +36,7 @@ Conocido, ambos jugadores conoceran las reglas y el entorno del juego.
 
 EL agente utilizado en el proyecto está basado en modelos. Con él nuestra máquina aprenderá y actuará en base a lo aprendido. Realmente no sé cómo direccionar exactamente cómo trabaja mi código y mostrarlo dentro de la imagen del propio modelo, ya que realmente la única función de nuestro modelo ocurre dentro del método get_computer_action(). Lo que se ha creado en este proyecto es lo que nos ayudará a elegir la acción. Sin embargo, esto no cambiará el estado, como evoluciona el resto o el efecto de las elecciones en el juego.
 
-![Modelo de agente basado en modelos](.\docs\Modelo_RPS.drawio.png)
+![Modelo de agente basado en modelos](./docs/Modelo_RPS.drawio.png)
 
 # 3. Cómo poder trabajar con este proyecto y jugar utilizando Windows
 
