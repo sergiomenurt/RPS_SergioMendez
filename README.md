@@ -32,15 +32,77 @@ Discreto, ya que sólo existen tres elecciones posibles en el juego.
 **Conocido/Desconocido:** 
 Conocido, ambos jugadores conoceran las reglas y el entorno del juego.
 
-# 2. Identificación do tipo de axente e estrutura
+# 2. Identificación del tipo de agente y su  estructura
 
-El tipo de agente va a ser basado en modelos y realizará una cción en cuanto a información pasada guardada
+EL agente utilizado en el proyecto está basado en modelos. Con él nuestra máquina aprenderá y actuará en base a lo aprendido. Realmente no sé cómo direccionar exactamente cómo trabaja mi código y mostrarlo dentro de la imagen del propio modelo, ya que realmente la única función de nuestro modelo ocurre dentro del método get_computer_action(). Lo que se ha creado en este proyecto es lo que nos ayudará a elegir la acción. Sin embargo, esto no cambiará el estado, como evoluciona el resto o el efecto de las elecciones en el juego.
 
-# 3. Implementación en Python
+![Modelo de agente basado en modelos](.\docs\Modelo_RPS.drawio.png)
 
-Será simple, solo hará falta un entorno (en mi caso utilizo conda), y solo habrá una clase. Lo más complejo pueden ser los tests.
+# 3. Cómo poder trabajar con este proyecto y jugar utilizando Windows
 
+**Paso 1: Instalar Git**
+
+Si aún no tienes Git instalado en tu sistema, debes instalarlo primero.
+
+Ve a la página oficial de Git y descarga el instalador para Windows.
+
+Ejecuta el instalador y sigue las instrucciones. Asegúrate de elegir las opciones predeterminadas, ya que son adecuadas para la mayoría de los usuarios.
+
+**Paso 2: Clonar el repositorio en tu máquina**
+
+Abre el "Anaconda Prompt" desde el menú de inicio o abre una terminal Conda dentro de VS Code.
+Crear y activar el entorno virtual: Si no has creado el entorno Conda aún, ejecuta los siguientes comandos en la terminal:
+
+conda create -n rps python=3.9
+
+conda activate rps
+
+Esto creará y activará el entorno Conda llamado rps.
+
+En la terminal de Conda, navega al directorio donde deseas guardar el proyecto. Por ejemplo, si deseas guardarlo en tu carpeta Proyectos:
+
+cd C:\Users\TuUsuario\Documents\Proyectos
+
+Luego, clona el repositorio con el siguiente comando:
+
+
+git clone https://github.com/sergiomenurt/RPS_SergioMendez.git
+
+Este comando descargará el repositorio en una carpeta llamada RPS_SergioMendez dentro del directorio en el que te encuentras.
+
+Navegar al proyecto clonado: Después de clonar el repositorio, entra en el directorio del proyecto:
+
+cd RPS_SergioMendez
+
+**Paso 3: Configurar el proyecto en VS Code**
+
+Abre VS Code y selecciona "Archivo" > "Abrir carpeta" y selecciona la carpeta RPS_SergioMendez que acabas de clonar.
+
+Si no lo has hecho ya, asegúrate de que VS Code esté utilizando el entorno Conda que creaste (el rps).
+
+Para esto, ve a la parte inferior izquierda de VS Code, donde se muestra el nombre del intérprete de Python. Haz clic allí y selecciona el entorno rps (el que activaste anteriormente).
+
+Para instalar las dependencias (si las hubiera), puedes usar el siguiente comando(en este proyecto no hará falta):
+
+pip install -r requirements.txt
+
+**Paso 4: Ejecutar el proyecto**
+
+En la terminal integrada de VS Code, asegúrate de que el entorno Conda está activado (verás algo como rps).
+
+Luego, ejecuta el archivo principal del proyecto RPS.py
+
+python src\RPS.py
+
+Esto ejecutará el juego de "Piedra, Papel o Tijeras", y podrás interactuar con él en la terminal.
+
+**Paso 5: Jugar y modificar el código**
+
+Una vez que el juego esté funcionando, puedes empezar a jugar contra la computadora.
+Si deseas modificar el código, simplemente edita los archivos en el proyecto y vuelve a ejecutar el archivo principal.
 
 # 4. Extensión ao RPS + Lizard Spock
 
 No cambiará mucho código, será una implementación más al códifo de RPS.py y en los tests par que funcionen las nuevas opciones del juego.(Importante: Explicar juego(ver en que parte del README se explica))
+
+Aun por hacer
