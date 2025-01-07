@@ -38,18 +38,18 @@ def assess_game(user_action, computer_action):
 
 def get_computer_action():
     if len(user_history) < 6:
-        computer_selection = random.randint(0, len(GameAction) - 1)
+        computer_selection = random.choice(list(GameAction))
     else:
         recent_actions = user_history[-6:]
         action_counts = Counter(recent_actions)
-        most_common_actions = [action for action, count in action_counts.items()
+        most_common_actions = [action for action, count in action_counts.items() 
                                if count == max(action_counts.values())]
-        target_action = random.choice(most_common_actions)
-        computer_selection = Victories[target_action].value
+        predicted_action = random.choice(most_common_actions)
+        computer_selection = Victories[predicted_action]
 
-    computer_action = GameAction(computer_selection)
-    print(f"Computer picked {computer_action.name}.")
-    return computer_action
+    print(f"Computer picked {computer_selection.name}.")
+    return computer_selection
+
 
 
 def get_user_action():
