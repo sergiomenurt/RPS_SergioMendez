@@ -103,6 +103,28 @@ Si deseas modificar el código, simplemente edita los archivos en el proyecto y 
 
 # 4. Extensión ao RPS + Lizard Spock
 
-No cambiará mucho código, será una implementación más al códifo de RPS.py y en los tests par que funcionen las nuevas opciones del juego.(Importante: Explicar juego(ver en que parte del README se explica))
+EL juego se extiende al RPSLS cuando añadimos más opciones de elección a nuestro usuario y también a nuestro ordenador. Junto con ello añadiremos los casos tanto de victoria como de derrota que corresponde a lizard y spock.
 
-Aun por hacer
+Serán añadidos en el tests_RPS.py diferentes casos unitarios para los casos de derrota y victoria de ambos.
+
+A la hora de jugar con nuestro proyecto. No habrá mayor problema que el conocimiento del juego(lo cual explicaré a continuación =).
+
+# 5. ¿Cómo jugar al RPSLS?
+
+Elige una opción: Tienes 5 opciones para elegir:Piedra, Papel, Tijeras, Lagarto o Spock.
+
+Eligen al mismo tiempo ambos jugadores (tú y el computador) sin saber que elegirá el otro.
+
+Las reglas del juego se basan en que cada elemento ganará o perderá contra otro. Los casos son los siguientes:
+
+Piedra gana a Tijeras y Lagarto.
+Papel gana a Piedra y Spock.
+Tijeras gana a Papel y Lagarto.
+Lagarto gana a Spock y Papel.
+Spock gana a Tijeras y Piedra.
+
+Ocurrirá un empate si ambos eligen la misma opción.
+
+Al final de cada ronda se preguntará añ usuario si quiere volver a jugar una nueva ronde en base a responder y(yes) o n(no).
+
+**Espero que lo hayas comprendido y hayas podido disfrutar de mi juego!**
